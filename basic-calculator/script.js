@@ -1,19 +1,3 @@
-document.getElementById("add").addEventListener("click", () => {
-    document.getElementById("result").textContent = "Result: ${calculate('add')}";
-})
-
-document.getElementById("subtract").addEventListener("click", () => {
-    document.getElementById("result").textContent = "Result: ${calculate('subtract')}";
-})
-
-document.getElementById("multiply").addEventListener("click", () => {
-    document.getElementById("result").textContent = "Result: ${calculate('multiply')}";
-})
-
-document.getElementById("divide").addEventListener("click", () => {
-    document.getElementById("result").textContent = "Result: ${calculate('divide')}";
-})
-
 function getNumbers() {
   const num1 = parseFloat(document.getElementById('num1').value);
   const num2 = parseFloat(document.getElementById('num2').value);
@@ -50,3 +34,19 @@ function calculate(operation) {
 
     return result;
 }
+
+document.getElementById("add").addEventListener("click", () => {
+    document.getElementById("result").textContent = `Result: ${calculate('add')}`;
+})
+
+document.getElementById("subtract").addEventListener("click", () => {
+    document.getElementById("result").textContent = `Result: ${calculate('subtract')}`;
+})
+
+document.getElementById("multiply").addEventListener("click", () => {
+    document.getElementById("result").textContent = `Result: ${calculate('multiply')}`;
+})
+
+document.getElementById("divide").addEventListener("click", () => {
+    document.getElementById("result").textContent = `Result: ${calculate('divide')}`;
+})
