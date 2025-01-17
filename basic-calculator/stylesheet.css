@@ -1,0 +1,38 @@
+body {
+    background-color: #D9F3E2;
+}
+
+h1 {
+    color: #810222;
+    font-size:60px; 
+}
+
+button {
+    background-color:#b5ffb5;
+    height: 60px;
+    width: 120px;
+    margin: 10px;
+    margin-left:25px;
+    border-radius: 10px;
+}
+
+input {
+    margin: 10px;
+    height: 50px;
+    width: 145px;
+
+}
+
+#clear {
+    margin-left: 100px;
+}
+
+p {
+    font-size:40px;
+    color:#331699;
+}
+
+li {
+    font-size:30px;
+    color:#705ac2;
+}
