@@ -51,4 +51,22 @@ function addPlayer()
         alert("Please enter a valid name and score");
     }
 }
+
+function filterLeaderboard()
+{
+    const minScore = parseInt(document.getElementById("minScore").value);
+
+    if (!isNaN(minScore))
+    {
+        const filteredPlayers = players.filter(player => player.score >= minScore);
+        populateLeaderboard(filteredPlayers);
+    }
+    else
+    {
+        alert("Please enter a valid minimum score");
+    }
+}
+
+
+
 sortLeaderboard();
