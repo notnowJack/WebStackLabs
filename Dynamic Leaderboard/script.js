@@ -4,9 +4,18 @@ const players = [
     { name: "Charlie", score: 100},
 ]
 
-function populateLeaderboard(data) {
+function populateLeaderboard(data) 
+{
     const table = document.getElementById("leaderboard");
+    
+    //rest table
+    table.innerHTML =
+        `<tr>
+            <th>Player</th>
+            <th>Score</th>
+        </tr>`;
 
+    //populate table
     data.forEach(player => {
         const row = document.createElement("tr");
         row.innerHTML =
@@ -17,4 +26,13 @@ function populateLeaderboard(data) {
     });
 }
 
-populateLeaderboard(players);
+
+function sortLeaderboard()
+{
+    //sort players in descending order of score
+    players.sort((a, b) => b.score - a.score);
+    //redo the table
+    populateLeaderboard(players);
+}   
+
+sortLeaderboard();
