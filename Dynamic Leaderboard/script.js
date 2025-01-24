@@ -1,14 +1,16 @@
-const players = [
+let players = JSON.parse(localStorage.getItem("players")) || [
     { name: "Alice", score: 150},
     { name: "Bob", score: 200},
     { name: "Charlie", score: 100},
-]
+];
+
+populateLeaderboard(players);
 
 function populateLeaderboard(data) 
 {
     const table = document.getElementById("leaderboard");
     
-    //rest table
+    //reset table
     table.innerHTML =
         `<tr>
             <th>Player</th>
@@ -16,16 +18,20 @@ function populateLeaderboard(data)
         </tr>`;
 
     //populate table
-    data.forEach(player => {
+    data.forEach((player, index) => {
         const row = document.createElement("tr");
         row.innerHTML =
             `<td>${player.name}</td>
             <td>${player.score}</td>`;
+        
+        if (index === 0)
+        {
+            row.classList.add("topPlayer");
+        }
 
-        table.appendChild(row)
+        table.appendChild(row);
     });
 }
-
 
 function sortLeaderboard()
 {
@@ -33,8 +39,8 @@ function sortLeaderboard()
     players.sort((a, b) => b.score - a.score);
     //redo the table
     populateLeaderboard(players);
+    saveToLocalStorage();
 }   
-
 
 function addPlayer()
 {
@@ -67,6 +73,8 @@ function filterLeaderboard()
     }
 }
 
-
-
+function saveToLocalStorage()
+{
+    localStorage.setItem("players", JSON.stringify(players));
+}
 sortLeaderboard();
