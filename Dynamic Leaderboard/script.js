@@ -35,4 +35,20 @@ function sortLeaderboard()
     populateLeaderboard(players);
 }   
 
+
+function addPlayer()
+{
+    const name = document.getElementById("newName").value;
+    const score = document.getElementById("newScore").value;
+
+    if (name && !isNaN(score))
+    {
+        players.push({name, score});
+        sortLeaderboard();
+    }
+    else 
+    {
+        alert("Please enter a valid name and score");
+    }
+}
 sortLeaderboard();
