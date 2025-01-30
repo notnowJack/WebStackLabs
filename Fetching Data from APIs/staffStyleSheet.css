@@ -1,0 +1,30 @@
+body {
+    margin: 20px;
+    background-color: #B3CFE7;
+}
+
+h1 {
+    color: #5D5F84;
+}
+
+#staffList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.staff-card {
+    border: 1px solid #617683;
+    padding: 15px;
+    width: 250px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.staff-card a {
+    text-decoration: none;
+    color: #66BDD0;
+    font-weight: bold;
+}

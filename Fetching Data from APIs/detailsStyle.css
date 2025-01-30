@@ -1,0 +1,17 @@
+body {
+    margin: 20px;
+    background-color: #B3CFE7;
+}
+
+h1 {
+    color: #5D5F84;
+}
+
+#stafDetails {
+    border: 1px solid #617683;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
